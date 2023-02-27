@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectrum Finance</title>
+
+    <!-- fonts -->
+    <link rel="preload" href="/dist/fonts/PPMori-Regular.woff2" as="font">
+    <link rel="preload" href="/dist/fonts/PPMori-SemiBold.woff2" as="font">
+    <link rel="preload" href="/dist/fonts/SpaceGrotesk-Medium.woff2" as="font">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/dist/css/normalize.min.css">
+    <link rel="stylesheet" href="/dist/css/itc-slider.min.css">
+    <link rel="stylesheet" href="/dist/css/style.min.css">
+
+    <!-- js -->
+    <script defer src="/dist/js/main.min.js"></script>
+    <script defer src="/dist/js/converter.min.js"></script>
+    <script defer src="/dist/js/roadmap.min.js"></script>
+    <script defer src="/dist/js/itc-slider.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="" class="header__logo">
+                <img src="/app/img/header/logo.svg" class="header__logo-img" alt="Spectrum Finance">
+            </a>
+            <nav class="header__nav">
+                <ul id="menu" class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="#section-swap" class="nav-link header__nav-link">Spectrum.DEX</a>
+                    </li>
+                    <li class="header__nav-item spf-token">
+                        <a href="#spf-token" class="nav-link header__nav-link">SPF Token</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#roadmap" class="nav-link header__nav-link">Roadmap</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#feedback" class="nav-link header__nav-link">Feedback</a>
+                    </li>
+                    <li class="header__nav-item partners">
+                        <a href="#partners" class="nav-link header__nav-link">Partners</a>
+                    </li>
+                </ul>
+                <!-- burger -->
+                <div id="burger" class="header__burger-menu">
+                    <svg class="header__burger" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 6H3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 18H9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </nav>
+            <button class="btn-link header__button" id="theme-button">
+                <span class="header__btn-link-icon"></span>
+                Launch Dex
+            </button>
+        </div>
+    </header>
+    <main>
+        <!-- Content (animation) -->
+        <section class="section-content">
+            <div class="container section-content__container">
+                <h1 class="heading section-content__header">
+                    Unlocking DeFi
+                </h1>
+                <p class="section-content__description">
+                    Spectrum is a full-fledged DeFi ecosystem
+                </p>
+                <div class="section-content__animation">
+                    <div id="content-img" class="section-content__img">
+                        <img src="/app/img/img-animation/1.webp" alt="icon" class="animated icon-1 section-content__icon">
+                        <img src="/app/img/img-animation/2.webp" alt="icon" class="animated icon-2 section-content__icon">
+                        <img src="/app/img/img-animation/3.webp" alt="icon" class="animated icon-3 section-content__icon">
+                        <img src="/app/img/img-animation/4.webp" alt="icon" class="animated icon-4 section-content__icon">
+                        <img src="/app/img/img-animation/5.webp" alt="icon" class="animated icon-5 section-content__icon">
+                        <img src="/app/img/img-animation/6.webp" alt="icon" class="animated icon-6 section-content__icon">
+                        <img src="/app/img/img-animation/7.webp" alt="icon" class="animated icon-7 section-content__icon">
+                        <img src="/app/img/img-animation/8.webp" alt="icon" class="animated icon-8 section-content__icon">
+                        <img src="/app/img/img-animation/9.webp" alt="icon" class="animated icon-9 section-content__icon">
+                        <img src="/app/img/img-animation/10.webp" alt="icon" class="animated icon-10 section-content__icon">
+                        <img src="/app/img/img-animation/11.webp" alt="icon" class="animated icon-11 section-content__icon">
+                        <img src="/app/img/img-animation/12.webp" alt="icon" class="animated icon-12 section-content__icon">
+                    </div>
+                    <div id="prism" class="section-content__prism">
+                        <img src="/app/img/img-animation/prism.webp" alt="prism" id="prism-img" class="section-content__prism-img prism-none">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Swap -->
+        <section class="section-swap" id="section-swap">
+            <div class="container section-swap__container">
+                <div class="section-swap__wrapper">
+                    <h2 class="adaptive-heading">Spectrum.DEX</h2>
+                    <div class="section-swap__wrapper-black">
+                        <div class="section-swap__swap">
+                            <strong class="section-swap__title">Swap</strong>
+                            <div class="section-swap__one-two">
+                                <div class="section-swap__one">
+                                    <div class="section-swap__one-span">
+                                        <span class="section-swap__span">From</span>
+                                        <span class="section-swap__span">Balance: 0.02</span>
+                                    </div>
+                                    <input type="number" class="section-swap__input" id="value" placeholder="0.0">
+                                    <select id="curr_one" class="section-swap__select erg-select">
+                                        <option class="section-swap__option-erg">
+                                            ERG
+                                        </option>
+                                        <option class="section-swap__option-neta">
+                                            Neta
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="section-swap__two">
+                                    <div class="section-swap__two-span">
+                                        <span class="section-swap__span">To</span>
+                                        <span class="section-swap__span">Balance: 0.02</span>
+                                    </div>
+                                    <div class="section-swap__wrapper-result">
+                                        <div class="section-swap__input result-input" id="result">0.0</div>
+                                        <select id="curr_two" class="section-swap__select neta-select">
+                                            <option class="section-swap__option-neta">
+                                                Neta
+                                            </option>
+                                            <option class="section-swap__option-erg">
+                                                ERG
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="section-swap__button">Swap</button>
+                        </div>
+                    </div>
+                    <div class="section-swap__content">
+                        <h2 class="heading section-swap__header">Spectrum.DEX</h2>
+                        <p class="description-color section-swap__description-color">
+                            Meet State of the Art Decentralized Exchange Protocol
+                        </p>
+                        <p class="description-white section-swap__description-white">
+                            Enhance your image in any environment with computational photography-powered 
+                            tools like brightness, contrast and white balance.
+                        </p>
+                        <button class="btn btn-learn section-swap__btn">Learn more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Offers -->
+        <section class="section-offers">
+            <div class="container section-offers__container">
+                <ul class="section-offers__list">
+                    <li class="section-offers__item">
+                        <div class="accelerator section-offers__item-content">
+                            <h2 class="heading section-offers__item-header">Accelerator</h2>
+                            <p class="description-color section-offers__description-color">
+                                Receive full-fledged support with technical aspects, creating relationships and marketing.
+                            </p>
+                            <p class="description-white section-offers__description-white">
+                                Receive full-fledged support with technical aspects, creating relationships and marketing.
+                            </p>
+                            <button class="btn btn-learn section-offers__btn">Learn more</button>
+                        </div>
+                        <div class="section-offers__item-img">
+                            <img src="/app/img/offers/accelerator.webp" alt="picture" class="section-offers-img">
+                        </div>
+                        <!-- Mobile -->
+                        <div class="mobile">
+                            <h2 class="heading section-offers__item-header">Accelerator</h2>
+                            <div class="mobile">
+                                <img src="/app/img/offers/accelerator.webp" alt="picture" class="section-offers-img">
+                            </div>
+                            <p class="description-color section-offers__description-color">
+                                Receive full-fledged support with technical aspects, creating relationships and marketing.
+                            </p>
+                            <p class="description-white section-offers__description-white">
+                                Receive full-fledged support with technical aspects, creating relationships and marketing.
+                            </p>
+                            <button class="btn btn-learn section-offers__btn">Learn more</button>
+                        </div>
+                    </li>
+                    <li class="token-item section-offers__item">
+                        <div class="token-img section-offers__item-img">
+                            <img src="/app/img/offers/token.webp" alt="picture" class="section-offers-img">
+                        </div>
+                        <div class="token section-offers__item-content" id="spf-token">
+                            <h2 class="heading section-offers__item-header">SPF Token</h2>
+                            <p class="description-token description-color section-offers__description-color">
+                                Become a part of Spectrum
+                            </p>
+                            <button class="btn btn-soon section-offers__btn-soon">Soon</button>
+                        </div>
+                        <!-- Mobile -->
+                        <div class="mobile">
+                            <h2 class="heading section-offers__item-header">SPF Token</h2>
+                            <div class="mobile">
+                                <img src="/app/img/offers/token.webp" alt="picture" class="section-offers-img">
+                            </div>
+                            <p class="description-token description-color section-offers__description-color">
+                                Become a part of Spectrum
+                            </p>
+                            <button class="btn btn-soon section-offers__btn-soon">Soon</button>
+                        </div>
+                    </li>
+                    <li class="network-item section-offers__item">
+                        <div class="network section-offers__item-content">
+                            <h2 class="heading section-offers__item-header">Spectrum. Network</h2>
+                            <p class="description-color section-offers__description-color">
+                                Taking DeFi to the next level.
+                            </p>
+                            <p class="description-white section-offers__description-white">/app
+                                Layer 2 solution to make quick, cheap and cross-chain DeFi come true.
+                            </p>
+                            <button class="btn btn-soon section-offers__btn-soon">Soon</button>
+                        </div>
+                        <div class="section-offers__item-img">
+                            <img src="/app/img/offers/network.webp" alt="picture" class="section-offers-img">
+                        </div>
+                        <!-- Mobile -->
+                        <div class="mobile">
+                            <h2 class="heading section-offers__item-header">Spectrum. Network</h2>
+                            <div class="mobile">
+                                <img src="/app/img/offers/network.webp" alt="picture" class="section-offers-img">
+                            </div>
+                            <p class="description-color section-offers__description-color">
+                                Taking DeFi to the next level.
+                            </p>
+                            <p class="description-white section-offers__description-white">
+                                Layer 2 solution to make quick, cheap and cross-chain DeFi come true.
+                            </p>
+                            <button class="btn btn-soon section-offers__btn-soon">Soon</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Advantages / Преимущества -->
+        <section class="section-advantages">
+            <div class="container section-advantages__container">
+                <h3 class="heading-h3 section-advantages__header">Practice first, dreams later</h3>
+                <ul class="section-advantages__list">
+                    <li class="section-advantages__item">
+                        <span class="section-advantages__icon-1"></span>
+                        <p class="section-advantages__item-description">Founded and managed by developers</p>
+                    </li>
+                    <li class="section-advantages__item">
+                        <span class="section-advantages__icon-2"></span>
+                        <p class="section-advantages__item-description">Over 50k community members </p>
+                    </li>
+                    <li class="section-advantages__item">
+                        <span class="section-advantages__icon-3"></span>
+                        <p class="section-advantages__item-description">We are the first to build eUTXO DEX </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Roadmap -->
+        <section class="section-roadmap" id="roadmap">
+            <div class="container section-roadmap__container">
+                <h3 class="heading-h3 section-roadmap__header">Roadmap</h3>
+                <div class="section-roadmap__tabs-wrapper">
+                    <div id="tabs" class="section-roadmap__tabs">
+                        <div class="section-roadmap__tab-btn active-btn" data-btn="1">
+                            <img src="/app/img/roadmap/icon-one.svg" alt="icon" class="section-roadmap__tab-btn-icon-one" data-btn="1">
+                            <strong class="section-roadmap__tab-btn-title" data-btn="1">Specrtum Finance</strong> 
+                            <img src="/app/img/roadmap/icon-two.svg" alt="icon" class="section-roadmap__tab-btn-icon-two" data-btn="1">
+                        </div>
+                        <div class="section-roadmap__tab-btn" data-btn="2">
+                            <img src="/app/img/roadmap/icon-one.svg" alt="icon" class="section-roadmap__tab-btn-icon-one" data-btn="2">
+                            <strong class="section-roadmap__tab-btn-title" data-btn="2">Specrtum Network</strong> 
+                            <img src="/app/img/roadmap/icon-two.svg" alt="icon" class="section-roadmap__tab-btn-icon-two" data-btn="2">
+                        </div>
+                        <div class="section-roadmap__tab-btn" data-btn="3">
+                            <img src="/app/img/roadmap/icon-one.svg" alt="icon" class="section-roadmap__tab-btn-icon-one" data-btn="3">
+                            <strong class="section-roadmap__tab-btn-title" data-btn="3">Specrtum Token</strong> 
+                            <img src="/app/img/roadmap/icon-two.svg" alt="icon" class="section-roadmap__tab-btn-icon-two" data-btn="3">
+                        </div>
+                    </div>
+                    <div id="contents" class="section-roadmap__contents">
+                        <div class="section-roadmap__content active-content" data-content="1">
+                            <div class="section-roadmap__content-descr">
+                                Ergo side DEX
+                                <div class="section-roadmap__content-btn-done done">
+                                    Done
+                                    <span class="section-roadmap__content-icon-done"></span>
+                                </div>
+                            </div>
+                            <div class="section-roadmap__content-descr">
+                                Cardano side DEX
+                                <div class="section-roadmap__content-btn-done done">
+                                    Done
+                                    <span class="section-roadmap__content-icon-done"></span>
+                                </div>
+                            </div> 
+                            <div class="section-roadmap__content-descr">
+                                Spectrum Finance Wallet
+                                <div class="section-roadmap__content-btn-process process">
+                                    In process
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="section-roadmap__content" data-content="2">
+                            <div class="section-roadmap__content-descr">
+                                Spectrum Network white paper
+                                <div class="section-roadmap__content-btn-done done">
+                                    Done
+                                    <span class="section-roadmap__content-icon-done"></span>
+                                </div>
+                            </div>
+                            <div class="section-roadmap__content-descr">
+                                Spectrum Network testnet
+                                <div class="section-roadmap__content-btn-done done">
+                                    Done
+                                    <span class="section-roadmap__content-icon-done"></span>
+                                </div>
+                            </div> 
+                            <div class="section-roadmap__content-descr">
+                                Spectrum Network mainnet
+                                <div class="section-roadmap__content-btn-process process">
+                                    In process
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="section-roadmap__content" data-content="3">
+                            <div class="section-roadmap__content-descr">
+                                Spectrum Finance bug bounty program
+                                <div class="section-roadmap__content-btn-done done">
+                                    Done
+                                    <span class="section-roadmap__content-icon-done"></span>
+                                </div>
+                            </div>
+                            <div class="section-roadmap__content-descr">
+                                Spectrum Finance DAO
+                                <div class="section-roadmap__content-btn-process process">
+                                    In process
+                                </div>
+                            </div> 
+                            <div class="section-roadmap__content-descr">
+                                Spectrum Finance DeFi scaling program
+                                <div class="section-roadmap__content-btn-process process">
+                                    In process
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile -->
+                <div id="accordion" class="accordion">
+                    <div class="accordion__item accordion__item_show">
+                      <div class="accordion__header section-roadmap__tab-btn-title">
+                        <img src="/app/img/roadmap/icon-one.svg" alt="icon" class="icon-accordion">
+                        Specrtum Finance
+                        <svg class="accordion__arrow" width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0988 18.261L3.54012 9.40802L4.97803 8.01791L12.1466 15.433L19.5617 8.26443L20.9518 9.70235L12.0988 18.261Z" fill="white"/>
+                        </svg>
+                      </div>
+                      <div class="accordion__body">
+                        <div class="done-accordion">
+                            Done
+                            <span class="section-roadmap__content-icon-done"></span>
+                        </div>
+                        <div class="section-roadmap__content-descr">
+                            Ergo side DEX  
+                        </div>
+                        <div class="done-accordion">
+                            Done
+                            <span class="section-roadmap__content-icon-done"></span>
+                        </div>
+                        <div class="section-roadmap__content-descr">
+                            Cardano side DEX
+                        </div>
+                        <div class="section-roadmap__content-btn-process process-accordion">
+                            In process
+                        </div> 
+                        <div class="section-roadmap__content-descr">
+                            Spectrum Finance Wallet
+                        </div> 
+                      </div>
+                    </div>
+                    <div class="accordion__item">
+                      <div class="accordion__header section-roadmap__tab-btn-title">
+                        <img src="/app/img/roadmap/icon-one.svg" alt="icon" class="icon-accordion">
+                        Spectrum Network
+                        <svg class="accordion__arrow" width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0988 18.261L3.54012 9.40802L4.97803 8.01791L12.1466 15.433L19.5617 8.26443L20.9518 9.70235L12.0988 18.261Z" fill="white"/>
+                        </svg>
+                      </div>
+                      <div class="accordion__body">
+                        <div class="done-accordion">
+                            Done
+                            <span class="section-roadmap__content-icon-done"></span>
+                        </div>
+                        <div class="section-roadmap__content-descr">
+                            Spectrum Network white paper
+                        </div>
+                        <div class="done-accordion">
+                            Done
+                            <span class="section-roadmap__content-icon-done"></span>
+                        </div>
+                        <div class="section-roadmap__content-descr">
+                            Spectrum Network testnet
+                        </div>
+                        <div class="section-roadmap__content-btn-process process-accordion">
+                            In process
+                        </div> 
+                        <div class="section-roadmap__content-descr">
+                            Spectrum Network mainnet
+                        </div>   
+                      </div>
+                    </div>
+                    <div class="accordion__item">
+                        <div class="accordion__header section-roadmap__tab-btn-title">
+                            <img src="/app/img/roadmap/icon-one.svg" alt="icon" class="icon-accordion">
+                          Spectrum Token
+                          <svg class="accordion__arrow" width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0988 18.261L3.54012 9.40802L4.97803 8.01791L12.1466 15.433L19.5617 8.26443L20.9518 9.70235L12.0988 18.261Z" fill="white"/>
+                        </svg>
+                        </div>
+                        <div class="accordion__body">
+                            <div class="done-accordion">
+                                Done
+                                <span class="section-roadmap__content-icon-done"></span>
+                            </div>
+                            <div class="section-roadmap__content-descr">
+                                Spectrum Finance bug bounty program
+                            </div>
+                            <div class="section-roadmap__content-btn-process process-accordion">
+                                In process
+                            </div>
+                            <div class="section-roadmap__content-descr">
+                                Spectrum Finance DAO
+                            </div> 
+                            <div class="section-roadmap__content-btn-process process-accordion">
+                                In process
+                            </div>
+                            <div class="section-roadmap__content-descr">
+                                Spectrum Finance DeFi scaling program
+                            </div>   
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </section>
+        <!-- Feedback -->
+            <section class="section-feedback" id="feedback">
+                <div class="container section-feedback__container">
+                    <h3 class="section-feedback__heading h3-heading">Feedback</h3>
+                    <ul class="section-feedback__cards">
+                        <li class="section-feedback__card">
+                            <img src="/app/img/feedback/woman.webp" alt="Mary Roy" class="section-feedback__photo">
+                            <strong class="section-feedback__name">Mary Roy</strong>
+                            <p class="section-feedback__feedback">
+                                Getting pretty excited about @ErgoDex. Fantastic team, working their asses off. 
+                                Plus, the fact that they're building this thing CROSS-CHAIN, on #Cardano #Ergo, just gets me bullish AF.
+                            </p>
+                        </li>
+                        <li class="section-feedback__card">
+                            <img src="/app/img/feedback/man-2.webp" alt="Daniel Friedman" class="section-feedback__photo">
+                            <strong class="section-feedback__name">Daniel Friedman</strong>
+                            <p class="section-feedback__feedback">
+                                Utilizes the full potential of what BIM can provide.
+                            </p>
+                        </li>
+                        <li class="section-feedback__card">
+                            <img src="/app/img/feedback/man.webp" alt="Andrew Lyons" class="section-feedback__photo">
+                            <strong class="section-feedback__name">Andrew Lyons</strong>
+                            <p class="section-feedback__feedback">
+                                Getting pretty excited about @ErgoDex. Fantastic team, working their asses off.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        <!-- Partners -->
+        <section class="section-partners" id="partners">
+            <div class="container section-partners__container">
+                <h3 class="h3-heading section-partners__header">Partners</h3>
+                <div class="section-partners__slider itc-slider" data-slider="itc-slider" data-loop="false" data-autoplay="false">
+                    <div class="section-partners__slider-wrapper itc-slider__wrapper">
+                        <div class="itc-slider__items">
+                            <div class="section-partners__slide itc-slider__item">
+                                <img src="/app/img/partners/1.webp" alt="partner's logo" class="section-partners__slide-icon">
+                            </div>
+                            <div class="section-partners__slide itc-slider__item">
+                                <img src="/app/img/partners/2.svg" alt="partner's logo" class="section-partners__slide-icon">
+                            </div>
+                            <div class="section-partners__slide itc-slider__item">
+                                <img src="/app/img/partners/3.svg" alt="partner's logo" class="section-partners__slide-icon">
+                            </div>
+                            <div class="section-partners__slide itc-slider__item">
+                                <img src="/app/img/partners/1.webp" alt="partner's logo" class="section-partners__slide-icon">
+                            </div>
+                            <div class="section-partners__slide itc-slider__item">
+                                <img src="/app/img/partners/2.svg" alt="partner's logo" class="section-partners__slide-icon">
+                            </div>
+                            <div class="section-partners__slide itc-slider__item">
+                                <img src="/app/img/partners/3.svg" alt="partner's logo" class="section-partners__slide-icon">
+                            </div>
+                            <div class="section-partners__slide itc-slider__item">
+                                <img src="/app/img/partners/1.webp" alt="partner's logo" class="section-partners__slide-icon">
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="section-partners__buttons">
+                        <button class="section-partners__prev itc-slider__btn itc-slider__btn_prev">
+                            <svg class="prev-btn" width="48" height="49" viewbox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5858 9.35464L24 7.94043L26.8284 10.7689L25.4142 12.1831L14.8284 22.7689H38H40V26.7689H38H14.8284L25.4142 37.3546L26.8284 38.7689L24 41.5973L22.5858 40.1831L8.58579 26.1831L7.17157 24.7689L8.58579 23.3546L22.5858 9.35464Z" fill="white"/>
+                            </svg>
+                        </button>
+                        <button  class="section-partners__next itc-slider__btn itc-slider__btn_next">
+                            <svg class="next-btn"  width="48" height="49" viewbox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.4142 9.35464L24 7.94043L21.1716 10.7689L22.5858 12.1831L33.1716 22.7689H10H8V26.7689H10H33.1716L22.5858 37.3546L21.1716 38.7689L24 41.5973L25.4142 40.1831L39.4142 26.1831L40.8284 24.7689L39.4142 23.3546L25.4142 9.35464Z" fill="white"/>
+                            </svg> 
+                        </button> 
+                    </div>
+                        
+                </div> 
+            </div>    
+        </section>
+        <footer>
+            <div class="container footer__container">
+                <div class="footer__left-right">
+                    <div class="footer__left">
+                        <h2 class="heading footer__header">Unlocking DeFi</h2>
+                        <ul class="footer__social-list">
+                            <li class="footer__social-item">
+                                <a href="" class="footer__social-link">
+                                    <span class="footer__social-icon social-1"></span>
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a href="" class="footer__social-link">
+                                    <span class="footer__social-icon social-2"></span>
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a href="" class="footer__social-link">
+                                    <span class="footer__social-icon social-3"></span>
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a href="" class="footer__social-link">
+                                    <span class="footer__social-icon social-4"></span>
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a href="" class="footer__social-link">
+                                    <span class="footer__social-icon social-5"></span>
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a href="" class="footer__social-link">
+                                    <span class="footer__social-icon social-6"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="mailto:info@spectrumlab.fi" class="footer__contact">info@spectrumlab.fi</a>
+                    </div>
+                    <div class="footer__right">
+                        <nav class="footer__nav">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item">
+                                    <a href="" class="nav-link footer__nav-link">Spectrum.DEX</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="" class="nav-link footer__nav-link">SPF Token</a>  
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="" class="nav-link footer__nav-link">Feedback</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="" class="nav-link footer__nav-link">Partners</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="footer__right-img">
+                            <div class="footer__img">
+                                <img src="/app/img/footer/footer-1.webp" alt="" class="">
+                            </div>
+                            <div class="footer__img">
+                                <img src="/app/img/footer/footer-2.webp" alt="" class="">
+                            </div>
+                            <div class="footer__img">
+                                <img src="/app/img/footer/footer-3.webp" alt="" class="">
+                            </div>
+                            <div class="footer__img">
+                                <img src="/app/img/footer/footer-4.webp" alt="" class="">
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <div class="footer__privacy-policy">
+                    <a href="" class="footer__policy-link">© 2023 Spectrum.Finance all rights reserved</a>
+                    <a href="" class="footer__policy-link">Terms of Use</a>
+                    <a href="" class="footer__policy-link">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

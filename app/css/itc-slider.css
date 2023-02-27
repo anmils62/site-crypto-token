@@ -1,0 +1,42 @@
+
+.itc-slider__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.itc-slider__items {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.itc-slider__item {
+  display: flex;
+  flex: 0 0 100%;
+  max-width: 265px;
+  padding: 35px;
+  margin-right: 30px;
+  background: #101010;
+  user-select: none;
+  will-change: transform;
+}
+
+.section-partners__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.itc-slider__btn {
+  cursor: pointer;
+  background: #000;
+  border: #000;
+} 
+
+
+.itc-slider__btn:hover {
+  background: #000;
+  opacity: 0.8;
+}
+
